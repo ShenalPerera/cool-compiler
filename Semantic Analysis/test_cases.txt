@@ -1,0 +1,73 @@
+class Main{
+	
+	a : Int <- 5;	
+	b : Int <- 5;
+
+	main():Int {
+	  	
+		a <- case true of
+				x : Object => a+b;
+				y : Bool =>	a-b;
+			esac
+		
+	};
+};
+
+class Main{
+	
+	a : Int <- 5;	
+	b : Int <- 5;
+
+	main():Int {
+		while 1 loop a<- a+1 pool
+	};
+};
+
+class Main{
+	
+	a : Int <- 5;	
+	b : Int <- 5;
+	s : Bool;	
+
+	main():Bool {
+		{
+			b <- a*a;
+			a <- b-a;
+			s <- true;
+		}
+	};
+};
+
+class Main{
+	
+	a : Int <- 5;	
+	b : Int <- 5;
+	s : Bool;	
+
+	main():Int {
+		Let x:Int in x*a
+	};
+};
+
+
+//for condition check
+class A{};
+class B inherits A{};
+class C inherits A{};
+class D inherits C{};
+
+
+class Main{
+	
+	a : Int <- 5;	
+	b : Int <- 5;
+	s : Bool <- true;
+	a1 : A;
+	b1 : B;
+	c1 : C;
+	d1 : D;	
+
+	main():A {
+		If s then b1 <- new B else d1 <- new D fi 
+	};
+};
